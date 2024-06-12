@@ -1,0 +1,149 @@
+/* pages/popos/popos.wxss */
+page{
+  background: #FFEFD5;
+}
+/*
+  四大刺绣
+*/
+.box{
+  width:100%;
+  margin: 0 auto;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  position:relative;
+  z-index:-1;
+  margin: 0rpx 0;
+  display: flex;
+  padding: 0 0rpx;
+  mask-repeat: repeat;
+}
+
+.detail {
+  width: 100%;
+  height: 100%;
+  position:relative;
+  margin: 0rpx 0;
+  display: flex;
+  padding: 0rpx 0rpx;
+  mask-repeat: repeat;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.detail image { 
+  width:100%;
+  height:100%;
+}
+
+.box_content{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content:space-around;
+}
+
+.box_content>li{
+  width: 25%;
+  height:300rpx;
+  margin-right:5rpx;
+  transition: all 0.3s linear;
+  background-repeat:repeat;
+  background-image: image-set('../../images/02.jpg');
+  overflow: hidden;
+}
+
+.box_content>li:nth-last-child(1){
+  margin-right:0;
+}
+
+.box_selec{
+  flex-grow:1;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*
+  答题测试
+*/
+.answer{
+    background: #B24F30;
+    height: 270rpx;
+    margin: 40rpx 20px;
+
+    display: flex;
+    padding: 10rpx 10rpx;
+    flex-direction: column;
+    align-items: center;
+    border-radius:10px;
+
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    border: solid 1px #FFEFD5;
+    box-shadow: 10px 7px 3px 3px rgb(178, 79, 48, 0.7);
+  
+}
+
+.answer text{
+  background: #E7AA46;
+  border-radius: 10px;
+  padding: 20rpx;
+  width:180px;
+  height: 30px;
+  font-size:20px;
+  align-self: center;    
+  box-shadow: -3px -3px 3px 3px rgb(231, 170, 70, 0.7) ;
+  transform: translateY(10px);
+}
+
+.answer .button{
+    background: #E7AA46;
+    border-radius: 20px;
+    padding: 7px 10px;
+    width:80px;
+    height: 20px;
+    margin: 10px;
+
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    border: solid 1px;
+    transform: translateY(10px);
+}
+
+
+/*
+  选项卡
+*/
+.listMulu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color:#B24F30;
+    justify-content: flex;
+    font-size: 50rpx;
+}
+
+.selectStyle{
+  border:1px dashed #000;
+  border-radius: 30px;
+  background-color:#E7AA46;
+  padding: 0rpx 0rpx;
+  margin: 0px;
+  width:150rpx;
+  text-align: center;
+  font-size: 60rpx;
+}

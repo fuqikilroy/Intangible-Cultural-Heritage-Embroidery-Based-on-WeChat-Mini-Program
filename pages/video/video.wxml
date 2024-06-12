@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<!-- 区域1：视频播放器 -->
+<video id="myVideo" controls src="{{src}}" enable-danmu danmu-btn></video>
+
+<!-- 区域2：弹幕控制区域 -->
+<view class="danmuArea">
+  <!-- 2-1 弹幕输入框 -->
+  <input type="text" placeholder="请输入弹幕内容" bindinput="getDanmu"></input>
+
+  <!-- 2-2 发送按钮 -->
+  <text class="button"bindtap="sendDanmu">发送弹幕</text>
+  <view class="play" bindtap="playVideo">开始播放</view>
+</view>
+
+<!-- 区域3：视频列表 
+<view class="videoList">
+  <view class="videoBar" wx:for="{{list}}" wx:key="id" data-url="{{item.videoUrl}}" >
+    <image src="/images/play.png"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+-->
+
+<!-- 区域4：评论 -->
+<view class="pinglun">
+  <view class="blanner">
+    <text  style="font-family: '微软雅黑'; font-style: normal;font-weight: bold;font-size: 20px; text-decoration: underline;color: #000000; ">评论</text>
+    <text  style="font-family: '微软雅黑'; font-style: normal;font-weight: bold;font-size: 10px; color: #acacac; ">46</text>
+    <text  class="text-right" style="font-family: '微软雅黑'; font-style: normal;font-weight: bold;font-size: 15px; color: #000000; "> 最热|最新</text>
+    <view>
+      <view class="users-content">
+        <input placeholder='宫廷御宴酒，评论走一走' style="font-family: '微软雅黑';font-size: 17px; text-decoration: underline;color: #9c9c9c; border-radius: 10px;"></input>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="users" wx:for="{{pinglun}}"wx:key="id">
+    <view class="users-content">
+      <image src="{{item.image_url}}" mode="widthFix"></image>
+      <text class="users-name">{{item.users_name}}</text>
+      <text class="users-text">{{item.text}}</text>
+      <text class="pinglun-time">{{item.add_time}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,92 @@
+<!--pages/cart/cart.wxml-->
+<!--Blanner-->
+<view class="blanner">
+  <view class="findbox">
+  <!--搜索框-->
+    <view class="inputbox">
+      <input placeholder='请输入搜索关键词' bindinput="getInput" 
+      value="{{val}}"></input>
+      <icon type="search" wx:if="{{isSearch}}"></icon>
+      <icon type="clear" wx:if="{{isClear}}"  bindtap="clearTap"></icon>
+    </view>
+  </view>
+  <!--分类列表-->
+    <view class="classify-list">
+      <span>综合 销量 价格    |筛选</span>
+    </view>
+</view>
+
+
+
+<!--公告-->
+<view class='adsec'>
+  <text style="font-size:30rpx;color: #B24F30;">公告:</text>
+    <swiper class="swiper_container" autoplay="true" circular="true" interval="2000">
+    <block wx:for="{{msgList}}" wx:key="item">
+
+      <swiper-item>
+        <view class="swiper_item">{{item.title}}</view>
+      </swiper-item>
+    </block>
+    </swiper>
+</view>
+
+
+
+<!--商品列表
+<view class="list">         
+    <view class="item" >
+      <block wx:for="{{cartlist}}" wx:for-item="item">
+        <image mode="widthFix" src="{{item.img_src}}"></image>
+        <text class="goods_name">{{item.goods_name}}</text>
+        ￥<text>{{item.goods_price}}</text>.00
+      </block>
+  </view>
+</view>  
+-->
+
+
+
+
+
+  <view class="list"  wx:for="{{newsList}}" wx:for-item="news" wx:key="{{news.id}}">
+    <view class="item" >
+      <view class="goods_img">
+        <image mode="widthFix" src="{{news.img_src}}" mode="widthFix"></image>
+      </view>
+      <view class="goods_info">
+        <text class="goods_name">{{news.goods_name}}</text>
+          <view class="goods_price">
+              ￥<text>{{news.goods_price}}</text>
+          </view>
+      </view>
+    </view>
+  </view>  
+
+
+<!--新闻
+  <view id='news-list'>
+    <view class='list-item' wx:for="{{newsList}}" wx:for-item="news" wx:key="{{news.id}}">
+      <image src='{{news.poster}}'></image>
+      <text bindtap='goToDetail' data-id='{{news.id}}'>◇{{news.title}}____{{news.add_date}}</text>
+    </view>
+  </view>
+列表-->
+
+<!--静态数据保真
+  <view class="list"  wx:for="{{goods_data}}">
+  <view class="item">
+    <view class="goods_img">
+      <image mode="widthFix" src="{{item.img_src}}"></image>
+    </view>
+    <view class="goods_info">
+      <text class="goods_name">{{item.goods_name}}</text>
+        <view class="goods_price">
+            ￥<text>{{item.goods_price}}</text>.00
+        </view>
+    </view>
+  </view>
+</view>  
+-->
+
+

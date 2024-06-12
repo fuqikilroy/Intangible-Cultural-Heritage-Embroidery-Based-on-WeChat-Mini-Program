@@ -1,0 +1,16 @@
+<!--pages/answer/answer.wxml-->
+<view class="body">
+  <image class="bg-image"  src="/images/bg.jpg"></image>
+  <view class="question">
+    <view class="title">
+      {{ answerNow + 1}}、{{ list[answerNow].title }}
+    </view>
+    <view class="option">
+      <view 
+        class="option-item {{ select === optionList[index] ? status:'' }}"  bindtap="selectAnswer" data-item="{{ optionList[index] }}"
+        wx:for="{{ list[answerNow].option }}"> 
+        {{ optionList[index] }}.{{ item }}     
+      </view>
+    </view>
+  </view>
+</view>

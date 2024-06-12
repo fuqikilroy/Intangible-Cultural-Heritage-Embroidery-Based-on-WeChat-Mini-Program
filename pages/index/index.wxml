@@ -1,0 +1,70 @@
+<!--pages/index/index.wxml-->
+<!--幻灯片滚动-->
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">
+  <block wx:for="{{swiperImg}}" wx:key='swiper{{index}}'>
+    <swiper-item>
+      <image src="{{item.src}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+<!--小游戏-->
+<view class='simplegame'>
+  <view class='one-item'>
+    <image mode="widthFix" src="../../images/gue.jpg"  bind:tap="goToNumguess"></image>
+    <view>猜数字小游戏</view>
+  </view>
+  <view class='one-item'>
+    <image mode="widthFix" src="../../images/jig.jpg"  bind:tap="goToJigsaw"></image>
+    <view>拼图小游戏</view>
+  </view>
+</view>
+
+
+
+
+<!--视频瀑布流-->
+<view class="content">
+  <view class="content-left"wx:for="{{list}}" wx:key="id" data-url="{{item.videoUrl}}" bindtap="goToVideo">
+        <view class="content-item">
+            <image src="{{item.poster}}"class="content-item-img" mode="widthFix" />
+            <view class="content-item-title">{{item.title}}</view>
+        </view>
+    </view>
+
+  <view class="content-right" wx:for="{{list}}" wx:key="id" data-url="{{item.videoUrl}}" bindtap="goToVideo">
+    <view class="content-item">
+            <image src="{{item.poster}}"class="content-item-img" mode="widthFix" />
+            <view class="content-item-title">{{item.title}}</view>
+        </view>
+  </view>
+</view>
+
+<!--视频列表
+<view class="videoList">
+  <view class="videoBar" wx:for="{{list}}" wx:key="id" data-url="{{item.videoUrl}}" bindtap="goToVideo">
+    <image src="../../images/play.png"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+-->
+
+<!--新闻列表
+  <view id='news-list'>
+  <view class='list-item' wx:for="{{newsList}}" wx:for-item="news" wx:key="{{news.id}}">
+    <image src='{{news.poster}}'></image>
+    <text bindtap='goToDetail' data-id='{{news.id}}'>◇{{news.title}}____{{news.add_date}}</text>
+  </view>
+</view>
+-->
+
+<!--
+  <view class="videoList">
+  <view class="videoBar" wx:for="{{list}}" wx:key="id" data-url="{{item.videoUrl}}" bindtap="goToVideo">
+    <image src="/images/play.png"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+-->

@@ -1,0 +1,24 @@
+<!--pages/numguess/numguess.wxml-->
+<view class='container'>
+  <text>欢迎来到猜数字小游戏</text>
+
+  <form>
+    <block wx:if='{{isGameStart}}'>
+      <input bindinput='getNumber' type='number' placeholder='请输入0-100之间的数字'></input>
+      <button class="button"  form-type='reset' bindtap='guess'>提交</button>
+    </block>
+    <block wx:else>
+      <button  bindtap='restartGame'>重新开始</button>
+    </block>
+  </form>
+
+
+  <text>
+    <span>rule</span>
+        1.系统将会随机生成一个0-100之间的数字。
+        2.您共有7次机会。
+        3.在7次之内猜到则游戏成功。
+  </text>
+
+  <text id='tip'>{{tip}}</text>
+</view>

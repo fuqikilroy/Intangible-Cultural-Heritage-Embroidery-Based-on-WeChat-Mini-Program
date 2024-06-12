@@ -1,0 +1,79 @@
+<!--pages/popos/popos.wxml-->
+<!--四大刺绣-->
+<view class ="box"> 
+    <ul class ="box_content">
+      <block wx:for="{{Img}}" wx:key='{{index}}'>
+          <li class="box_selec" 
+        bindtap="getId" id='{{item.id}}'>
+        <image class="bg-image" src="{{item.src}}"></image>
+        </li>
+      </block>
+    </ul>
+</view>
+<!--放大预览图-->
+<view class="detail">
+  <image src="{{currentImgSrc}}"  mode="widthFix"       
+      style="display:{{isShowSelect}}" 
+      bindtap="Noshow">
+  </image>
+</view>
+
+
+
+<!--答题测试-->
+<view class="answer">
+  <text>非遗刺绣知多少?</text>
+  <view class="button" bind:tap="goToAnswer"><tex>立即测试！</tex></view>
+</view>
+
+
+
+
+<!--选项卡-->
+<view class="listMulu">
+  <view class="{{index==currentKey?'selectStyle':''}}" wx:for="{{list2}}" wx:key="index" bindtap="changeCurrentKey" data-index="{{index}}">{{item}}
+  </view>
+</view>
+
+  <view>
+    <swiper class="swiperBox" current="{{currentKey}}">
+      <swiper-item class="swiperItem" wx:for="{{list}}" wx:key="index">
+        <view class="swipertext" wx:for="{{item}}" wx:for-index="newindex"
+        wx:for-item="newitem" wx:key="newindex">
+            <view class="list-item" bindtap="goToDetail" id="{{newitem.id}}">
+            <image src='{{newitem.poster}}'></image>
+            <text  data-id='{{newitem.id}}'>◇{{newitem.title}}____{{newitem.add_time}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+</view>
+
+<!--
+    <view>
+    <swiper class="swiperBox" current="{{currentKey}}">
+      <swiper-item class="swiperItem" wx:for="{{list}}" wx:key="index">
+        <view class="swipertext" wx:for="{{item}}" wx:for-index="newindex"
+        wx:for-item="newitem" wx:key="newindex">
+          <text>书名：{{newitem.name}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+</view>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

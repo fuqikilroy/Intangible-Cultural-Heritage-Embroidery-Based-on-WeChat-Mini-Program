@@ -1,0 +1,23 @@
+/* pages/game/game.wxss */
+/* 提示图 */
+page{
+  background: #FFEFD5;
+}
+
+image{
+  width: 250rpx;
+  height: 250rpx;
+}
+
+/* 游戏画布区域 */
+canvas{
+  border: 1rpx solid;
+  width: 300px;
+  height: 300px;
+  transform: translateY(10px);
+}
+
+.restart{
+  transform: translateY(20px);
+  color:  #E7AA46;
+}

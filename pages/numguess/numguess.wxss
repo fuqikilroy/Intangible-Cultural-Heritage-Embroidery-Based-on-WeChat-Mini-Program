@@ -1,0 +1,25 @@
+/* pages/numguess/numguess.wxss */
+page{
+  background: #FFEFD5;
+}
+/*文本框*/
+input{
+  border: 1rpx solid #E7AA46;/*1rpx宽的绿色实线边框*/
+  margin: 30rpx 0;/*上下外边距30rpx*/
+  height: 90rpx;/*高度*/
+  border-radius: 20rpx; /*圆角边框*/
+}
+
+button{
+  background: #E7AA46;
+  border-radius: 10px;
+}
+
+/*提示框*/
+#tip{
+  height:800rpx;/*固定高度*/
+}
+
+.text{
+  font:100rpx;
+}
